@@ -46,7 +46,7 @@ export default function LandingPage() {
         </div>
       </main>
       <div className="absolute bottom-5 left-1/2 flex -translate-x-1/2 flex-col items-center gap-y-4">
-        <img src="logo.png" alt="logo" className="size-10" />
+        <img src="logo.png" alt="logo" className="size-8" />
         <div className="flex gap-x-2 text-xs opacity-50">
           <Link href="#">Terms of Service</Link>|
           <Link href="#">Privacy Policy</Link>
