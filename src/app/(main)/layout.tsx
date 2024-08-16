@@ -10,7 +10,7 @@ export default async function MainLayout({
   const { getUser } = getKindeServerSession();
 
   const kindeUser = await getUser();
-  if (!kindeUser) redirect("/api/auth/login");
+  if (!kindeUser) redirect("/landing");
 
   return (
     <div className="flex min-h-screen flex-col px-16 py-4">

@@ -1,18 +1,19 @@
-import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
+import { Typewriter } from "./_components/typewriter";
+import { GetStarted } from "./_components/get-started";
 
 export default function LandingPage() {
   return (
     <div className="h-screen px-16 py-4">
-      <main className="relative flex h-full items-center gap-x-24 overflow-hidden">
+      <main className="relative flex h-full flex-col items-center gap-24 overflow-hidden pt-12 lg:flex-row">
         <img
           src="/orbital.png"
           alt="orbital"
-          className="animate-aniorbital absolute bottom-0 left-0 -z-10 opacity-5"
+          className="absolute bottom-0 left-0 -z-10 animate-aniorbital opacity-5"
         />
 
         <div className="flex flex-1 flex-col items-center justify-center gap-y-4">
-          <h1 className="bg-gradient-to-r from-primary to-gray-400 bg-clip-text text-9xl text-transparent">
+          <h1 className="bg-gradient-to-r from-primary to-gray-400 bg-clip-text text-6xl font-bold tracking-tight text-transparent lg:text-9xl">
             KhatGPT
           </h1>
 
@@ -25,24 +26,32 @@ export default function LandingPage() {
             minus?
           </p>
 
-          <Link href="#" className={buttonVariants()}>
-            Get Started
-          </Link>
+          <GetStarted />
         </div>
 
-        <div className="flex h-full flex-1 items-center justify-center">
-          <div className="relative flex h-1/2 w-4/5 items-center justify-center rounded-md bg-primary/5">
+        <div className="flex w-full flex-1 justify-center lg:h-full lg:items-center">
+          <div className="relative flex h-1/2 w-4/5 items-center justify-center rounded-md bg-primary/[0.02]">
             <div className="absolute left-0 top-0 h-full w-full overflow-hidden rounded-md">
-              <div className="animate-anibot-bg h-full w-[200%] bg-[url('/bg.png')] bg-[auto_100%] opacity-20" />
+              <div className="h-full w-[200%] animate-anibot-bg bg-[url('/bg.png')] bg-[auto_100%] opacity-20" />
             </div>
+
             <img
               src="bot.png"
               alt="bot"
-              className="animate-anibot h-full w-full object-contain"
+              className="h-full w-full animate-anibot object-contain"
             />
+
+            <Typewriter />
           </div>
         </div>
       </main>
+      <div className="absolute bottom-5 left-1/2 flex -translate-x-1/2 flex-col items-center gap-y-4">
+        <img src="logo.png" alt="logo" className="size-10" />
+        <div className="flex gap-x-2 text-xs opacity-50">
+          <Link href="#">Terms of Service</Link>|
+          <Link href="#">Privacy Policy</Link>
+        </div>
+      </div>
     </div>
   );
 }
