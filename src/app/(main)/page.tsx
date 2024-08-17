@@ -48,27 +48,31 @@ export default function HomePage() {
       </div>
 
       <div className="w-full">
-        <div className="mx-auto flex max-w-3xl flex-1">
-          <form className="flex w-full items-center rounded-full bg-card px-4 py-2">
-            <Button size="icon" variant="ghost">
-              <PaperclipIcon className="mr-2 size-6" />
-            </Button>
+        <div className="mx-auto px-3 md:px-5">
+          <div className="mx-auto md:max-w-3xl lg:max-w-[40rem] xl:max-w-[48rem]">
+            <form className="w-full">
+              <div className="flex w-full items-center gap-x-1.5 rounded-[26px] bg-secondary p-1.5">
+                <Button size="icon" variant="ghost">
+                  <PaperclipIcon />
+                </Button>
 
-            <input
-              type="text"
-              placeholder="Message KhatGPT"
-              className="flex-1 bg-transparent"
-            />
-            <Button size="icon" variant="ghost">
-              <ArrowUpIcon className="size-8" />
-            </Button>
-          </form>
-        </div>
+                <input
+                  type="text"
+                  placeholder="Message KhatGPT"
+                  className="flex-1 bg-transparent"
+                />
+                <Button size="icon" variant="ghost">
+                  <ArrowUpIcon />
+                </Button>
+              </div>
+            </form>
+          </div>
 
-        <div className="p-2 text-center text-xs">
-          <span className="opacity-50">
-            KhatGPT can make mistakes. Check important info.
-          </span>
+          <div className="p-2 text-center text-xs">
+            <span className="opacity-50">
+              KhatGPT can make mistakes. Check important info.
+            </span>
+          </div>
         </div>
       </div>
     </div>

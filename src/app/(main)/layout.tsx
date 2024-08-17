@@ -68,7 +68,7 @@ export default async function MainLayout({
           <UserButton user={kindeUser} />
         </header>
 
-        <main className="flex-1">{children}</main>
+        <main className="h-[calc(100vh-4rem)] flex-1">{children}</main>
       </div>
     </div>
   );
